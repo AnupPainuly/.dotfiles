@@ -1,5 +1,5 @@
 #alias ls='lsd -al'
-alias ls='exa -al --icons'
+alias ls='exa -al --icons --grid --long'
 alias path='echo -e ${PATH//:/\\n}A'
 alias ?='duck.sh'
 alias ??='google'

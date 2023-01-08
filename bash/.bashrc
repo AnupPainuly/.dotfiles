@@ -35,6 +35,8 @@ esac
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
+
+
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -137,3 +139,12 @@ fi
 
 #RANDOM COLOR SCRIPT
 colorscript random
+
+# Eternal bash history.
+# ---------------------
+#export HISTFILESIZE=
+#export HISTSIZE=
+#export HISTFILE=~/.bash_eternal_history
+#export HISTTIMEFORMAT="[%F %T] "
+#export HISTCONTROL=ignorespace:ignoredups:erasedups
+
