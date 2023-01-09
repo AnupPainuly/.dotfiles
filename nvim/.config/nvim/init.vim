@@ -55,6 +55,13 @@ noremap <silent> <space> :silent noh<Bar>echo<CR>
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
+"Telescopic bindings
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fd <cmd>Telescope find_files cwd=~/<cr>  
+
 "Auto save for fold state
 "au BufWinLeave * mkview
 "au BufWinEnter * silent loadview
@@ -74,3 +81,20 @@ hi! CocErrorFloat guifg=#40E0D0
 
 "spellcheck
 noremap <F5> :setlocal spell! 
+
+"Telescopic configuration
+lua << EOF
+require('telescope').setup{
+defaults = {
+  prompt_prefix = "$"
+  },
+pickers = {
+  find_files = {
+    -- `hidden = true` will still show the inside of `.git/` as it's not `.gitignore`d.
+    find_command = { "rg", "--files", "--hidden", "-L","--glob", "!**/.git/*" },
+    }
+  }
+}
+require('telescope').load_extension('fzf')
+EOF
+
