@@ -11,7 +11,6 @@ fi
 #Exports
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
-eval "$(dircolors ~/.dircolors)"
 
 #set bat as manpager
 #export MANPAGER="sh -c 'col -bx | batcat --theme gruvbox-dark -l man -p'"
@@ -135,7 +134,6 @@ fi
 
 #PS1 prompt kinda minimal
 #export PS1="\e[35m\u@wsl: \w\n> \e[0m"
-
 
 #RANDOM COLOR SCRIPT
 colorscript random

@@ -48,7 +48,9 @@ vnoremap <leader>p "+p
 vnoremap <leader>P "+P
 
 "auto commenting c/c++ style
-vnoremap <leader>c :s/^\(.*\)/\/*\1*\/
+vnoremap <leader>c :s/^\(.*\)/\/*\1*\/<cr>
+
+"Hit space twice to remove search highlights
 noremap <silent> <space> :silent noh<Bar>echo<CR>
 
 "visual mode move the selection
@@ -83,6 +85,7 @@ hi! CocErrorFloat guifg=#40E0D0
 noremap <F5> :setlocal spell! 
 
 "Telescopic configuration
+
 lua << EOF
 require('telescope').setup{
 defaults = {
@@ -97,4 +100,3 @@ pickers = {
 }
 require('telescope').load_extension('fzf')
 EOF
-
