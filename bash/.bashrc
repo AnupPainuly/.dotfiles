@@ -146,3 +146,4 @@ colorscript random
 #export HISTTIMEFORMAT="[%F %T] "
 #export HISTCONTROL=ignorespace:ignoredups:erasedups
 
+RANGER_LOAD_DEFAULT_RC=FALSE
