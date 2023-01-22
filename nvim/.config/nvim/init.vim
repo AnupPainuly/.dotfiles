@@ -1,6 +1,6 @@
 source $HOME/.config/nvim/vim-plug/plugins.vim 
 filetype plugin indent on
-set ts=2 sts=2 sw=2 et si si
+"set ts=2 sts=2 sw=2 et si si
 set rnu "set relative new line
 set scrolloff=999
 

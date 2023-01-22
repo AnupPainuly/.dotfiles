@@ -11,18 +11,23 @@ fi
 #Exports
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 #set bat as manpager
-#export MANPAGER="sh -c 'col -bx | batcat --theme gruvbox-dark -l man -p'"
+export MANPAGER="sh -c 'col -bx | batcat --theme gruvbox-dark -l man -p'"
 
 #set nvim as manpager
-export MANPAGER="nvim +Man!"
+#export MANPAGER="nvim +Man!"
 
 #Allows to cd into directory by typing the <directory name>/. Does not work on hidden files.
 shopt -s autocd
 
 #vim bindings for bash
 set -o vi
+
+#custom keybindings
+bind '"\C-g":"cd $(fzfp)\n"' 
+bind '"\C-f":"cd $(fzfp-preview 2> /dev/null)\n"' 
 
 # If not running interactively, don't do anything
 case $- in

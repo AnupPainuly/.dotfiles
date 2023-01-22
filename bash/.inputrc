@@ -3,10 +3,10 @@ set editing-mode vi
 #Show the vim moce in the PS1 prompt(cmd or ins)
 set show-mode-in-prompt on
 
-set keyseq-timout 10
 set vi-ins-mode-string [I]\1\e[5 q\2
 set vi-cmd-mode-string [C]\1\e[1 q\2
 
 #stop opening vim in command mode on clickng v
 set keymap vi-command
 v: ""
+

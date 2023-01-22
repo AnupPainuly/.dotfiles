@@ -1,0 +1,4 @@
+#!/bin/bash
+temp=`curl -s wttr.in/Kolhewadi,pune?format=%t`
+wind=`curl -s wttr.in/Kolhewadi,pune?format=%w`
+printf $temp && printf " $wind"
