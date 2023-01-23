@@ -1,0 +1,16 @@
+#!/bin/bash
+#This pomodoro script takes user input of pomo session and break in minutes.
+if [ $# -lt 2 ];then
+	echo arguments missing
+	exit
+fi
+for i in $(seq $(($1*60)) -1 1)
+do 
+	printf "\r\U0001F345 %dm:%ds \b" $((i/60)) $((i%60))
+	sleep 1;
+done
+for i in $(seq $(($2*60)) -1 1)
+do 
+	printf "\r\U00023F3 %dm:%ds \b" $((i/60)) $((i%60))
+	sleep 1;
+done
