@@ -27,14 +27,20 @@ _fzf_comprun() {
   esac
 }
 
-#Commands that are too long are not fully visible on screen. We can use --preview option to display the full command on the preview window. In the following example, we bind ? key for toggling the preview window.
+#Options
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' 
+  --preview-window down:3:hidden:wrap 
+  --bind '?:toggle-preview'"
 
-export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 
-#Preview for fuzzy finding the files by piping fzf into batcat
-export FZF_CTRL_T_OPTS="--preview 'batcat --theme gruvbox-dark --style=numbers --color=always --line-range :50 {}' --bind alt-j:preview-page-up,alt-k:preview-page-down"
+export FZF_CTRL_T_OPTS="
+  --preview 'batcat --theme gruvbox-dark --style=numbers --color=always --line-range :50 {}' 
+  --bind alt-j:preview-page-down,alt-k:preview-page-up"
+export FZF_TMUX_OPTS='-p80%,60%'
 
-#Using fd instead of find for fzf
-export FZF_DEFAULT_COMMAND='fd . $HOME --hidden --follow --exclude .git'
+#commands
+export FZF_DEFAULT_COMMAND='fd . /home/darkstar --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME --hidden"

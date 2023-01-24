@@ -26,8 +26,7 @@ shopt -s autocd
 set -o vi
 
 #custom keybindings
-bind '"\C-g":"cd $(tmux-popup-fzf-dir)\n"' 
-bind '"\C-f":"vim $(tmux-popup-fzf-files 2> /dev/null)\n"' 
+bind '"\C-f":"vim \C-t"' 
 
 # If not running interactively, don't do anything
 case $- in
@@ -152,3 +151,9 @@ colorscript random
 #export HISTCONTROL=ignorespace:ignoredups:erasedups
 
 RANGER_LOAD_DEFAULT_RC=FALSE
+
+#function vif() {
+#    local fname
+#    fname=$(fzf-file-widget) || return
+#    vim "$fname"
+#}

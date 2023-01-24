@@ -1,2 +1,4 @@
 #!/bin/bash
+#Description: print the battery percentage
+#Dependencies: acpi 
 acpi | awk '{print $4}' | tr -d ','

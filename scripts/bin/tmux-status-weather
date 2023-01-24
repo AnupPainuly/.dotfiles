@@ -1,4 +1,6 @@
 #!/bin/bash
-temp=`curl -s wttr.in/Kolhewadi,pune?format=%t`
-wind=`curl -s wttr.in/Kolhewadi,pune?format=%w`
-printf $temp && printf " $wind"
+#Description: gets wheather temperature and wind speed from wttr.in
+#Dependencies: curl
+temp=$(curl -s wttr.in/Kolhewadi,pune?format=%t)
+wind=$(curl -s wttr.in/Kolhewadi,pune?format=%w)
+printf '%s' "$temp " && printf '%s' "$wind"

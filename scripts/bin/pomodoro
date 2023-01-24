@@ -1,5 +1,8 @@
 #!/bin/bash
-#This pomodoro script takes user input of pomo session and break in minutes.
+
+#Description: Takes user arguments of time in minutes for work and break sessions respectively and creates a timer.
+#Dependencies: emote
+
 if [ $# -lt 2 ];then
 	echo arguments missing
 	exit
