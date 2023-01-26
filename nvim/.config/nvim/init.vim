@@ -61,15 +61,14 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+"nnoremap <leader>fs <cmd>Telescope current_buffer_fuzzy_find sorting_strategy=ascending prompt_position=top<cr>
+noremap <leader>fs <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find({sorting_strategy="ascending"})<cr>
+"nnoremap <leader>fs <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_ivy())<cr>
 nnoremap <leader>fd <cmd>Telescope find_files cwd=~/<cr>  
 
 "Auto save for fold state
 "au BufWinLeave * mkview
 "au BufWinEnter * silent loadview
-
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
 
 "terminal split below, resize and start insert mode
 nnoremap <leader>t :sp<bar>resize7<bar>term<CR>
@@ -83,6 +82,9 @@ hi! CocErrorFloat guifg=#40E0D0
 
 "spellcheck
 noremap <F5> :setlocal spell! 
+
+"ariline garbage at bottom-right 
+let g:airline#extensions#whitespace#enabled = 0
 
 "Telescopic configuration
 
