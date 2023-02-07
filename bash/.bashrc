@@ -1,7 +1,9 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
-
 #Source files
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+#starting x windows
+[[ $(fgconsole 2>/dev/null) == 1 ]] && exec startx -- vt1
 
 # ~/.bash_aliases, instead of adding them here directly.
 if [ -f ~/.bash_aliases ]; then
@@ -11,7 +13,7 @@ fi
 #Exports
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 #set bat as manpager
 export MANPAGER="sh -c 'col -bx | batcat --theme gruvbox-dark -l man -p'"
@@ -27,6 +29,7 @@ set -o vi
 
 #custom keybindings
 bind '"\C-f":"vim \C-t"' 
+setxkbmap -option caps:swapescape
 
 # If not running interactively, don't do anything
 case $- in

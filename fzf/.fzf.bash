@@ -41,6 +41,6 @@ export FZF_CTRL_T_OPTS="
 export FZF_TMUX_OPTS='-p80%,60%'
 
 #commands
-export FZF_DEFAULT_COMMAND='fd . /home/darkstar --hidden --follow --exclude .git'
+export FZF_DEFAULT_COMMAND='fdfind . /home/darkstar --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME --hidden"

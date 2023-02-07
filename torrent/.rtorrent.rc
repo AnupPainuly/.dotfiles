@@ -43,7 +43,7 @@ directory.default.set = ~/rtorrent/downloads
 session.path.set = ~/rtorrent/session
 
 # Watch a directory for new torrents, and stop those that have been deleted.
-schedule2 = watch_directory,5,5,load.start=~/rtorrent/watch/*.torrent
+schedule2 = watch_directory,5,5,load.start="~/rtorrent/watch/*.torrent"
 
 # Close torrents when disk-space is low.
 #
@@ -139,7 +139,7 @@ schedule2 = watch_directory,5,5,load.start=~/rtorrent/watch/*.torrent
 ui.color.complete.set=41
 ui.color.stopped.set=33
 
-ui.color.footer.set="black <<fg>> on yellow <<bg>>"
+ui.color.footer.set="black <<fg>> on green <<bg>>"
 ui.color.even.set="on 234"
 ui.color.odd.set="on 232"
 

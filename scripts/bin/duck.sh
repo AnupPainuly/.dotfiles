@@ -1,2 +1,0 @@
-#!/bin/bash
-lynx "duckduckgo.com/lite?q=$*"

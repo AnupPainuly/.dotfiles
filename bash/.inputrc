@@ -3,8 +3,11 @@ set editing-mode vi
 #Show the vim moce in the PS1 prompt(cmd or ins)
 set show-mode-in-prompt on
 
-set vi-ins-mode-string [I]\1\e[5 q\2
-set vi-cmd-mode-string [C]\1\e[1 q\2
+#set vi-ins-mode-string [I]\1\e[5 q\2
+#set vi-cmd-mode-string [C]\1\e[1 q\2
+#surrounding color code with \1 and \2 to keep readline happy
+set vi-cmd-mode-string "\1\033[91m\2❯\1\033[0m\2"
+set vi-ins-mode-string "\1\033[92m\2❯\1\033[0m\2"
 
 #stop opening vim in command mode on clickng v
 set keymap vi-command
