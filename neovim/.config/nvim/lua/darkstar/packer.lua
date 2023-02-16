@@ -13,7 +13,6 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
-
     use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use 'nvim-treesitter/nvim-treesitter-context'
     use 'nvim-treesitter/playground'
@@ -27,7 +26,6 @@ return require('packer').startup(function(use)
     use 'dominikduda/vim_current_word'
     use 'tpope/vim-rsi'
     use { "ellisonleao/gruvbox.nvim" }
-    use { "catppuccin/nvim", as = "catppuccin" }
     use {"sainnhe/gruvbox-material"}
     --use 'gruvbox-community/gruvbox'
     use {

@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "/home/darkstar/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
-  catppuccin = {
-    loaded = true,
-    path = "/home/darkstar/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/darkstar/.local/share/nvim/site/pack/packer/start/cmp-buffer",

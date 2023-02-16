@@ -17,4 +17,6 @@ alias toipe='tmux popup -E -w 60% -h 40% "toipe"'
 alias tmux='tmux -u'
 alias vim='nvim'
 alias keyrate="xset r rate 400 100"
-
+alias rice="wget -qO- http://git.io/rice"
+alias mask="stty -echo"
+alias unmask="stty echo"
