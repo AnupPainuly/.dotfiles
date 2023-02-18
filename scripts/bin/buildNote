@@ -1,0 +1,11 @@
+#!/bin/bash
+#Description: generate pdf for the markdown notes.
+#Dependencies: Pandoc
+
+filename=$1
+target="$(dirname "${filename}")/../pdf"
+outputFile="$(basename "$filename" .md).pdf"
+
+#mkdir -p "$target"
+
+pandoc -o "$target/$outputFile" "$filename" &
