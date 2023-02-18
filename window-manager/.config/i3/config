@@ -234,7 +234,7 @@ bindsym $mod+BackSpace mode "$mode_system"
 assign [class="kitty" instance="kitty"] → $ws1
 assign [class="qutebrowser" instance="qutebrowser"] → $ws2
 assign [class="notion-snap" instance="notion-snap"] → $ws3
-assign [class="mpv" instance="gl"] → $ws4
+#assign [class="mpv" instance="gl"] → $ws4
 
 # floating pop up automatically
 for_window [window_role="pop-up"] floating enable
@@ -243,6 +243,15 @@ for_window [class="Gnome-calculator" instance="gnome-calculator"] floating enabl
 for_window [class="Gpick" instance="gpick"] floating enable
 for_window [class="Pcmanfm" instance="pcmanfm"] floating enable
 for_window [class="Nitrogen"] floating enable
+for_window [title="notetaker_window"] floating enable
+
+#fullscreen mode
+#for_window [class="qutebrowser"] fullscreen enable
+
+#notetaking keymap
+bindsym $mod+n exec kitty --title notetaker_window notetaker
+#bindsym $mod+Shift+n exec mostRecentNote
+
 
 
 #Auto start applications
@@ -253,7 +262,7 @@ exec_always --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authenticati
 
 #battery pop-up
 exec_always --no-startup-id xfce4-power-manager
-for_window [class="qutebrowser"] fullscreen enable
+
 
 #gaps
 workspace 1 gaps outer 5 
