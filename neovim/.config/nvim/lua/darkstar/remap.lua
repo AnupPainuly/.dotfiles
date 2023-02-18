@@ -30,3 +30,6 @@ vim.keymap.set("v", "<leader>p", "\"+p")
 --worst keypress of them allow
 vim.keymap.set("n", "Q", "<nop>")
 
+--output the scribbled notes to pdf with pandoc
+vim.keymap.set("n", "<leader>o", ":silent !~/bin/buildNote %<CR>")
+

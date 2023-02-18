@@ -26,12 +26,18 @@ return require('packer').startup(function(use)
     use 'dominikduda/vim_current_word'
     use 'tpope/vim-rsi'
     use { "ellisonleao/gruvbox.nvim" }
+
+    --themes
     use {"sainnhe/gruvbox-material"}
     --use 'gruvbox-community/gruvbox'
+    use {"sainnhe/everforest"}
+    use {"folke/tokyonight.nvim"}
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+
+    --lsp-zero
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',

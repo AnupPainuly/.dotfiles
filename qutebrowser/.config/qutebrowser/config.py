@@ -155,9 +155,9 @@ c.url.searchengines = {'DEFAULT':'https://google.com/search?q={}'} #Type dict
 config.bind('xb','config-cycle statusbar.show always never') #show-hide-bar
 config.bind('xt','config-cycle tabs.show always never') #show-hide-tab
 config.bind('xx','config-cycle statusbar.show always never;;config-cycle tabs.show always never') #show-hide-tab&bar
-config.bind('<Ctrl-Shift-d>', 'hint links spawn --verbose --detach mpv {hint-url} --input-ipc-server=/tmp/mpvsocket')
+#config.bind('<Ctrl-Shift-d>', 'hint links spawn --verbose --detach mpv {hint-url} --input-ipc-server=/tmp/mpvsocket')
 config.bind('M','hint links spawn mpv {hint-url}') #open youtube vedios in mpv
-config.bind('Z','hint links spawn kitty -e youtube-dl {hint-url}')
+#config.bind('Z','hint links spawn kitty -e youtube-dl {hint-url}')
 
 #------------------------------theme------------
 # gruvbox dark hard qutebrowser theme by Florian Bruhin <me@the-compiler.org>
