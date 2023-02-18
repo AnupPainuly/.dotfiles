@@ -26,6 +26,4 @@ vim.opt.rnu = true
 vim.opt.foldenable = false
 --vim.g['markdown_fenced_languages'] = {'c', 'lua', 'javascript'}
 vim.g['markdown_syntax_conceal'] = 0
---vim.api.nvim_command([[
---autocmd BufWritePost *note-*.md :silent !buildNote %:p]])
 
