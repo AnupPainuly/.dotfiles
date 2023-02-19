@@ -250,7 +250,7 @@ for_window [title="notetaker_window"] floating enable
 
 #notetaking keymap
 bindsym $mod+n exec kitty --title notetaker_window notetaker
-#bindsym $mod+Shift+n exec mostRecentNote
+bindsym $mod+Shift+n exec $HOME/bin/mostRecentNote
 
 
 
