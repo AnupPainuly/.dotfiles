@@ -259,6 +259,7 @@ exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id picom -b
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+exec_always --no-startup-id kitty
 
 #battery pop-up
 exec_always --no-startup-id xfce4-power-manager
