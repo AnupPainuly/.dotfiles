@@ -25,9 +25,10 @@ return require('packer').startup(function(use)
     use 'jiangmiao/auto-pairs'
     use 'dominikduda/vim_current_word'
     use 'tpope/vim-rsi'
-    use { "ellisonleao/gruvbox.nvim" }
-
+    use 'gyim/vim-boxdraw'
+    use 'ActivityWatch/aw-watcher-vim'
     --themes
+    use { "ellisonleao/gruvbox.nvim" }
     use {"sainnhe/gruvbox-material"}
     --use 'gruvbox-community/gruvbox'
     use {"sainnhe/everforest"}

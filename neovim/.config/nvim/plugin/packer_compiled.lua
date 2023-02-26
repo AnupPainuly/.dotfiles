@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/darkstar/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
+  ["aw-watcher-vim"] = {
+    loaded = true,
+    path = "/home/darkstar/.local/share/nvim/site/pack/packer/start/aw-watcher-vim",
+    url = "https://github.com/ActivityWatch/aw-watcher-vim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/darkstar/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -208,6 +213,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/darkstar/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vim-boxdraw"] = {
+    loaded = true,
+    path = "/home/darkstar/.local/share/nvim/site/pack/packer/start/vim-boxdraw",
+    url = "https://github.com/gyim/vim-boxdraw"
   },
   ["vim-css-color"] = {
     loaded = true,

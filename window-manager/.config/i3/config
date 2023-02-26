@@ -244,6 +244,7 @@ for_window [class="Gpick" instance="gpick"] floating enable
 for_window [class="Pcmanfm" instance="pcmanfm"] floating enable
 for_window [class="Nitrogen"] floating enable
 for_window [title="notetaker_window"] floating enable
+for_window [class="Yad" title="yad-calendar"] floating enable ,move position center 
 
 #fullscreen mode
 #for_window [class="qutebrowser"] fullscreen enable
@@ -261,6 +262,8 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 exec_always --no-startup-id kitty
 exec_always --no-startup-id $HOME/bin/autotiling -w 1
+exec_always --no-startup-id /opt/activitywatch/aw-qt &
+
 
 #battery pop-up
 exec_always --no-startup-id xfce4-power-manager

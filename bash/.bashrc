@@ -14,6 +14,7 @@ fi
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 export PATH="$HOME/bin:$PATH"
+export PATH="/opt/activitywatch/:$PATH"
 export JAVA_HOME=/opt/jdk-11.0.18+10
 export PATH=$PATH:$JAVA_HOME/bin
 #export SWT_GTK3=0
