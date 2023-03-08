@@ -1,4 +1,0 @@
-#!/bin/sh
-
-fzf --preview 'batcat --theme gruvbox-dark --style=numbers --color=always --line-range :100 {}' --bind alt-j:preview-page-down,alt-k:preview-page-up
-

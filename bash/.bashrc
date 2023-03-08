@@ -17,8 +17,9 @@ export PATH="$HOME/bin:$PATH"
 export PATH="/opt/activitywatch/:$PATH"
 export JAVA_HOME=/opt/jdk-11.0.18+10
 export PATH=$PATH:$JAVA_HOME/bin
-#export SWT_GTK3=0
 export PATH="$HOME/.local/bin:$PATH"
+export PKG_CONFIG_PATH="/usr/lib/x86_64-linux-gnu/pkgconfig/:$PKG_CONFIG_PATH"
+
 
 #set bat as manpager
 export MANPAGER="sh -c 'col -bx | batcat --theme gruvbox-dark -l man -p'"
