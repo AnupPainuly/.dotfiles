@@ -43,19 +43,6 @@ case $- in
       *) return;;
 esac
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
-
-
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
-
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -124,10 +111,6 @@ esac
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-#alias ll='ls -alF'
-#alias la='ls -A'
-#alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -150,21 +133,16 @@ fi
 
 #RANDOM COLOR SCRIPT
 colorscript random
-
 keyrate
 
 # Eternal bash history.
 # ---------------------
-#export HISTFILESIZE=
-#export HISTSIZE=
-#export HISTFILE=~/.bash_eternal_history
-#export HISTTIMEFORMAT="[%F %T] "
-#export HISTCONTROL=ignorespace:ignoredups:erasedups
+export HISTFILE="$HOME/.local/share/bash/eternal_bash_history"
+export HISTFILESIZE=-1
+export HISTSIZE=-1
+export HISTTIMEFORMAT="[%F %T] "
+export HISTCONTROL=ignorespace:ignoredups:erasedups
+shopt -u histappend
 
 RANGER_LOAD_DEFAULT_RC=FALSE
 
-#function vif() {
-#    local fname
-#    fname=$(fzf-file-widget) || return
-#    vim "$fname"
-#}
