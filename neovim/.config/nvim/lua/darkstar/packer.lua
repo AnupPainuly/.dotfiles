@@ -15,7 +15,6 @@ return require('packer').startup(function(use)
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
     use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use 'nvim-treesitter/nvim-treesitter-context'
-    use 'nvim-treesitter/playground'
     use 'nvim-lua/plenary.nvim'
     use 'nvim-tree/nvim-web-devicons'
     use 'ap/vim-css-color'
@@ -28,7 +27,7 @@ return require('packer').startup(function(use)
     use 'gyim/vim-boxdraw'
     use 'ActivityWatch/aw-watcher-vim'
     --themes
-    use { "ellisonleao/gruvbox.nvim" }
+    --use { "ellisonleao/gruvbox.nvim" }
     use {"sainnhe/gruvbox-material"}
     --use 'gruvbox-community/gruvbox'
     use {"sainnhe/everforest"}
@@ -53,7 +52,7 @@ return require('packer').startup(function(use)
             {'hrsh7th/cmp-nvim-lsp'},     -- Required
             {'hrsh7th/cmp-buffer'},       -- Optional
             {'hrsh7th/cmp-path'},         -- Optional
-            {'saadparwaiz1/cmp_luasnip'}, -- Optional
+            --{'saadparwaiz1/cmp_luasnip'}, -- Optional
             {'hrsh7th/cmp-nvim-lua'},     -- Optional
 
             -- Snippets
@@ -61,4 +60,7 @@ return require('packer').startup(function(use)
             {'rafamadriz/friendly-snippets'}, -- Optional
         }
     }
+    -- Database
+    use { 'tpope/vim-dadbod' }
+    use { 'kristijanhusak/vim-dadbod-ui' }
 end)

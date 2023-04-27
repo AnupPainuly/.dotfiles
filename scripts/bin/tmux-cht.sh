@@ -4,7 +4,7 @@
 #Dependencies: curl, tmux, fzf
 
 languages=$(echo "c cpp lua" | tr ' ' "\n")
-core_utils=$(echo "mv find rm grep awk sed" | tr ' ' "\n")
+core_utils=$(echo "mv find rm grep awk sed nmcli" | tr ' ' "\n")
 
 selected=$(printf '%s' "$languages\n$core_utils" | fzf)
 read -rp "query: " query
