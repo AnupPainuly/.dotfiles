@@ -30,10 +30,16 @@
       hasPrimary = true;
     }
     const leaf = '\ue7a4';
-    const laptop = '\uf233';
+    const laptop = '';
     const ship = '\uf2cd';
+    const dbligature = '\ue706';
+    const promptligature = '';
 
     let serverInfo = '';
+    let dbligvar='';
+    let prompt_ligature_var=''
+    let dbName_var=''
+    let readPref_var=''
     if (serverBuildInfo.dataLake) {
       serverInfo += chalk.green(ship) + ' ';
     } else if (serverBuildInfo.modules.includes('enterprise')) {
@@ -42,7 +48,12 @@
       serverInfo += chalk.green(laptop) + ' ';
     }
 
-    return `${serverInfo}${hasPrimary ? '₁' : '₂'} \uf831 ${readPref} ${analyticsNode ? chalk.cyan('\uf080 ') : ''} \ue706 ${dbName} → `;
+    dbligvar += chalk.blue(dbligature) + '';
+    prompt_ligature_var += chalk.greenBright(promptligature) + ' ';
+    dbName_var += chalk.yellow.bold(dbName) + '';
+    readPref_var += chalk.hex('#b16286').bold(readPref) + '';
+
+    return `${serverInfo}${hasPrimary ? '₁' : '₂'} \uf831 ${readPref_var} ${analyticsNode ? chalk.cyan('\uf080 ') : ''} ${dbligvar} ${dbName_var} ${prompt_ligature_var}`;
   };
 
   boringPrompt = () => { prompt = undefined };
