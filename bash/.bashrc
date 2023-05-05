@@ -19,6 +19,10 @@ export JAVA_HOME=/opt/jdk-11.0.18+10
 export PATH=$PATH:$JAVA_HOME/bin
 export PATH="$HOME/.local/bin:$PATH"
 export PKG_CONFIG_PATH="/usr/lib/x86_64-linux-gnu/pkgconfig/:$PKG_CONFIG_PATH"
+export HBASE_HOME=/home/darkstar/hbase-2.5.3
+export PATH=$PATH:$HBASE_HOME/bin
+export NODE_PATH="/home/darkstar/.npm-global/lib/node_modules/:$NODE_PATH"
+
 
 
 #set bat as manpager
@@ -87,14 +91,14 @@ else
 fi
 unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
+## If this is an xterm set the title to user@host:dir
+#case "$TERM" in
+#xterm*|rxvt*)
+#    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+#    ;;
+#*)
+#    ;;
+#esac
 
 # enable color support of ls and also add handy aliases
 #if [ -x /usr/bin/dircolors ]; then
@@ -146,3 +150,4 @@ shopt -u histappend
 
 RANGER_LOAD_DEFAULT_RC=FALSE
 
+export PATH=~/.npm-global/bin:$PATH
