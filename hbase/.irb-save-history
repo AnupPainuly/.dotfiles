@@ -1,1 +1,66 @@
 list
+help
+status
+status 'simple'
+status 'summary'
+status
+hbase > version
+version
+whoami
+:
+gdfg
+gdgd
+clear
+help
+j
+use pgdbda
+get_tables
+get tables
+show tables
+list
+clear
+get_table
+clear
+cls
+clear
+edit
+.edit
+list
+create 'worker', 'city', 'contact'
+list
+get_table 'worker'
+w=get_table 'worker'
+put 'worker, 'r1', 'city:temp', 'pune'
+put 'worker, 'r1', 'city:permanent', 'doon'
+list
+t.scan
+scan 'worker'
+put 'worker', 'r1', 'city:permanent', 'doon'
+put 'worker', 'r1', 'city:temp', 'pune'
+put 'worker', 'r1', 'city:office', 'pashan'
+put 'worker', 'r1', 'contact:personal', '123'
+put 'worker', 'r1', 'contact:office', '321'
+t.put 'r2', 'city:temp', 'pune'
+w.put 'r2', 'city:temp', 'pune'
+w=get_table 'worker'
+w.put 'r2', 'city:temp', 'pune'
+w.put 'r2', 'city:permanent', 'kashmir'
+w.put 'r2', 'city:office', 'hinjewadi'
+w.put 'r2', 'contact:personal', 456
+w.put 'r2', 'contact:office', 654
+w.put 'r3', 'contact:office', 987
+w.put 'r3', 'contact:personal', 789
+w.put 'r3', 'city:office', 'baner'
+w.put 'r3', 'city:permanent', 'shimla'
+w.put 'r3', 'city:temp', 'pune'
+w.scan
+scan 'worker'
+clear
+w.put 'r2', 'city:temp','Vale'
+scan 'worker'
+t.delete 'r1', 'contact:office'
+w.delete 'r1', 'contact:office'
+scan 'worker'
+w.scan {COLUMN => 'contact:personal'}
+w.scan, {COLUMN => 'contact:personal'}
+scan 'worker' , {COLUMN => 'contact:personal'}
