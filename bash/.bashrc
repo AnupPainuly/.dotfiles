@@ -1,5 +1,6 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 #Source files
+source ~/bin/dockerfun
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 #starting x windows
@@ -18,10 +19,12 @@ export PATH="/opt/activitywatch/:$PATH"
 export JAVA_HOME=/opt/jdk-11.0.18+10
 export PATH=$PATH:$JAVA_HOME/bin
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/lang/python/venv/bin/":$PATH
 export PKG_CONFIG_PATH="/usr/lib/x86_64-linux-gnu/pkgconfig/:$PKG_CONFIG_PATH"
 export HBASE_HOME=/home/darkstar/hbase-2.5.3
 export PATH=$PATH:$HBASE_HOME/bin
 export NODE_PATH="/home/darkstar/.npm-global/lib/node_modules/:$NODE_PATH"
+export PATH="$HOME/lang/python/venv/bin:$PATH"
 
 
 

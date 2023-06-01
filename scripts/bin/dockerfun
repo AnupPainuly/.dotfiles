@@ -1,0 +1,45 @@
+#!/bin/bash
+
+#Helper function for docker
+
+dcleanup(){
+    #remove all the exited containers
+    sudo docker rm $(sudo docker ps --filter status=exited -q  2> /dev/null) 2> /dev/null
+}
+
+cassandra(){
+    sudo docker network create cassandra
+    sudo docker run --rm -d \
+        --name cassandra \
+        --hostname cassandra \
+        --network cassandra \
+        cassandra
+    sleep 120
+    sudo docker run --rm \
+        --network cassandra \
+        -v "$(pwd)/data.cql:/scripts/data.cql" \
+        -e CQLSH_HOST=cassandra -e CQLSH_PORT=9042 -e CQLVERSION=3.4.6 nuvo/docker-cqlsh
+    sudo docker run --rm -it \
+        --network cassandra nuvo/docker-cqlsh \
+        cqlsh cassandra 9042 --cqlversion='3.4.6'
+
+}
+
+cloudera(){
+        #-p 50070:50070- NameNode WebUI 
+        #-p 50075:50075- DataNode WebUI
+        #-p 50090:50090- Secondary NameNode
+        #-p 8888:8888  - HUE
+        #-p 10020:10020- MapReduce JobHistory server addr
+        #-p 19888:19888- MapReduce JobHistory webapp 
+        #-p 13562:13562- MapReduce Shuffle Port
+        #-p 8088:8088  - Yarn Resource Manager WebUI
+    sudo docker run --hostname=quickstart.cloudera \
+        --privileged=true -it  \
+        -p 50070:50070  -p 50075:50075  \
+        -p 50090:50090  -p 8888:8888    \
+        -p 10020:10020  -p 19888:19888  \
+        -p 13562:13562  -p 8088:8088    \
+         cloudera/quickstart-5.13 /usr/bin/docker-quickstart
+}
+

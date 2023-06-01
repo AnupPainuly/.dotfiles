@@ -1,0 +1,51 @@
+#!/bin/bash
+#Objective: Get the score of ongoing cricket matches in the terminal
+#Dependencies: xmllint, rofi, curl
+
+
+#fetching xml file for livescores from the website and writing it to tmp
+curl -k -L -s \
+    http://static.cricinfo.com/rss/livescores.xml > /tmp/rss.xml
+
+#no of matches listed on the website
+matches=$(xmllint \
+    --xpath 'count(/rss/channel/item)' /tmp/rss.xml)
+
+#iterate and list all the matches from xml file and stor it in roficric
+for ((i = 1;i <= matches; i++))
+do
+    title=$(xmllint --xpath \
+        '/rss/channel/item['$i']/title/text()' /tmp/rss.xml 2> /dev/null)
+
+    echo "$i:$title" 
+
+done > /tmp/roficric
+
+#take user input using rofi menu
+match_no=$(rofi -dmenu -p "select the match: " < /tmp/roficric \
+    | awk -F ':' '{print $1}')
+
+#selected match link
+match_link=$(xmllint --xpath \
+    '/rss/channel/item['"$match_no"']/link/text()' /tmp/rss.xml) 
+
+#fetch the score and formatting it show only score.
+#man page like qutting of program
+while true
+do
+    curl -kLs $match_link \
+        | \grep -oP '(?<=<title>).*?(?=</title>)'\
+        | awk -F "," '{print $1}'| tr -d '('
+
+    sleep 60
+    clear
+
+done &
+echo "press q to quit!"
+while read -sn 1 quit && [[ $quit != 'q' ]];
+do
+    echo "quit $quit"
+done
+#
+#Kills the background job
+kill %1
