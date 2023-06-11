@@ -25,6 +25,7 @@ export HBASE_HOME=/home/darkstar/hbase-2.5.3
 export PATH=$PATH:$HBASE_HOME/bin
 export NODE_PATH="/home/darkstar/.npm-global/lib/node_modules/:$NODE_PATH"
 export PATH="$HOME/lang/python/venv/bin:$PATH"
+export PATH=~/.npm-global/bin:$PATH
 
 
 
@@ -153,4 +154,3 @@ shopt -u histappend
 
 RANGER_LOAD_DEFAULT_RC=FALSE
 
-export PATH=~/.npm-global/bin:$PATH
