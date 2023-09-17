@@ -19,13 +19,14 @@ export PATH="/opt/activitywatch/:$PATH"
 export JAVA_HOME=/opt/jdk-11.0.18+10
 export PATH=$PATH:$JAVA_HOME/bin
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/lang/python/venv/bin/":$PATH
 export PKG_CONFIG_PATH="/usr/lib/x86_64-linux-gnu/pkgconfig/:$PKG_CONFIG_PATH"
 export HBASE_HOME=/home/darkstar/hbase-2.5.3
 export PATH=$PATH:$HBASE_HOME/bin
 export NODE_PATH="/home/darkstar/.npm-global/lib/node_modules/:$NODE_PATH"
 export PATH="$HOME/lang/python/venv/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
+export NLTK_DATA="/usr/local/share/nltk_data:$NLTK_DATA"
+export PATH=$PATH:$NLTK_DATA/
 
 
 
@@ -154,3 +155,7 @@ shopt -u histappend
 
 RANGER_LOAD_DEFAULT_RC=FALSE
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

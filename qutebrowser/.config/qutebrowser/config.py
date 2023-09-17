@@ -9,7 +9,6 @@
 # Documentation:
 #   qute://help/configuring.html
 #   qute://help/settings.html
-
 # Change the argument to True to still load settings configured via autoconfig.yml
 config.load_autoconfig(False)
 
@@ -157,7 +156,7 @@ config.bind('xt','config-cycle tabs.show always never') #show-hide-tab
 config.bind('xx','config-cycle statusbar.show always never;;config-cycle tabs.show always never') #show-hide-tab&bar
 #config.bind('<Ctrl-Shift-d>', 'hint links spawn --verbose --detach mpv {hint-url} --input-ipc-server=/tmp/mpvsocket')
 config.bind('M','hint links spawn mpv {hint-url}') #open youtube vedios in mpv
-#config.bind('Z','hint links spawn kitty -e youtube-dl {hint-url}')
+config.bind('Z','hint links spawn kitty -e youtube-dl {hint-url}')
 
 #------------------------------theme------------
 # gruvbox dark hard qutebrowser theme by Florian Bruhin <me@the-compiler.org>
@@ -484,6 +483,7 @@ c.colors.tabs.pinned.selected.even.bg = bg0
 c.colors.tabs.pinned.selected.even.fg = c.colors.tabs.selected.odd.fg
 
 # Background color of pinned selected odd tabs.
+
 c.colors.tabs.pinned.selected.odd.bg = c.colors.tabs.pinned.selected.even.bg
 
 # Foreground color of pinned selected odd tabs.
