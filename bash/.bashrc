@@ -23,8 +23,9 @@ export PKG_CONFIG_PATH="/usr/lib/x86_64-linux-gnu/pkgconfig/:$PKG_CONFIG_PATH"
 export HBASE_HOME=/home/darkstar/hbase-2.5.3
 export PATH=$PATH:$HBASE_HOME/bin
 export NODE_PATH="/home/darkstar/.npm-global/lib/node_modules/:$NODE_PATH"
-export PATH="$HOME/lang/python/venv/bin:$PATH"
-export PATH=~/.npm-global/bin:$PATH
+export PGDBDA_VENV="$HOME/lang/python/venv/bin"
+export PATH=$PATH:$VENV
+export PATH="$HOME/.npm-global/bin:$PATH"
 export NLTK_DATA="/usr/local/share/nltk_data:$NLTK_DATA"
 export PATH=$PATH:$NLTK_DATA/
 
