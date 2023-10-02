@@ -28,6 +28,10 @@ export PATH=$PATH:$VENV
 export PATH="$HOME/.npm-global/bin:$PATH"
 export NLTK_DATA="/usr/local/share/nltk_data:$NLTK_DATA"
 export PATH=$PATH:$NLTK_DATA/
+export PYSPARK_PYTHON=python3
+export PYSPARK_DRIVER_PYTHON=python3
+export SPARK_HOME=$HOME/lang/python/venv/lib/python3.11/site-packages/pyspark
+export PATH=$PATH:$SPARK_HOME/bin
 
 
 
